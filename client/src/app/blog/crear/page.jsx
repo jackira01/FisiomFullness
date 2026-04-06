@@ -1,6 +1,8 @@
 import { getTypes } from '../../../services/types';
 import BlogForm from '@/components/Blog/BlogForm';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: 'Crea un blog',
   description: 'formulario de creación de un blog profesional',

@@ -1,6 +1,8 @@
 import { getBlogs } from '../../services/blogs';
 import BlogSection from '@/components/Blog/BlogSection';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: "Blogs",
   description: "Blogs publicados por profesionales de fisiomfulness",

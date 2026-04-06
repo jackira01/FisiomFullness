@@ -2,6 +2,8 @@ import { getQuestions } from '../../services/questions';
 import { apiEndpoints } from '../../api_endpoints';
 import PreguntaExpertoClient from './client';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: 'Pregunta a un experto',
   description: 'Siéntete libre de hacer una pregunta de forma completamente anónima, y los profesionales de Fisiomfulness resolverán tus dudas a la brevedad.',

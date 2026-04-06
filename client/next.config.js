@@ -19,10 +19,7 @@ const nextConfig = (phase, { defaultConfig }) => ({
   typescript: {
     ignoreBuildErrors: true,
   },
-  // Reducir el uso de memoria del compilador en desarrollo
-  experimental: {
-    webpackMemoryOptimizations: true,
-  },
+
 });
 
 module.exports = nextConfig;

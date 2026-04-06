@@ -1,6 +1,8 @@
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { getServerSession } from "next-auth";
 import { getTypes } from "@/services/types";
+
+export const dynamic = 'force-dynamic';
 import { redirect } from "next/navigation";
 import MyBlogs from "@/components/Blog/my-blogs/MyBlogs";
 import roles from "@/utils/roles";
