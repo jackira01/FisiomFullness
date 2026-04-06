@@ -1,0 +1,32 @@
+# Dependencias (se re-instalan en la imagen)
+node_modules/
+
+# Archivos de entorno (se inyectan en runtime)
+.env
+.env.*
+
+# Uploads locales (se usa Cloudinary en producción)
+uploads/*
+!uploads/.gitkeep
+
+# Logs
+*.log
+npm-debug.log*
+
+# Control de versiones
+.git
+.gitignore
+
+# Scripts de semilla y diagnóstico (no son parte del servidor)
+seed-*.js
+check-*.js
+diagnose-*.js
+test-*.js
+
+# Documentación
+*.md
+docs/
+
+# Configuración de editor/IDE
+.vscode/
+.idea/

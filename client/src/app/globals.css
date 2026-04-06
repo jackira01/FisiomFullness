@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply mb-3 font-extrabold text-4xl leading-none;
+  }
+
+  h2 {
+    @apply mb-4 font-bold text-2xl leading-none;
+  }
+
+  h3 {
+    @apply mb-2 font-semibold text-xl leading-6;
+  }
+
+  h4 {
+    @apply mb-2 font-semibold text-base leading-6;
+  }
+
+  blockquote {
+    @apply pl-4 border-l-2 border-secondary-300 italic;
+  }
+
+  b {
+    @apply font-bold;
+  }
+
+  i {
+    @apply italic;
+  }
+
+  input::-ms-reveal,
+  input::-ms-clear {
+    display: none;
+  }
+
+  .htmlField {
+    @apply break-words;
+  }
+
+  .htmlField > ul,
+  ol {
+    @apply px-4 marker:text-primary-700;
+  }
+
+  .htmlField > ul {
+    @apply list-disc;
+  }
+
+  .htmlField > ol {
+    @apply list-decimal;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    /* background-color: rgba(217,217,227,.8); */
+    /* background-color: rgba(167, 167, 177, 0.8); */
+    @apply bg-primary-500;
+    @apply rounded-full;
+    @apply border-3 border-solid border-zinc-300;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    /* background-color: rgba(167, 167, 177, 1); */
+    @apply bg-secondary-400;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-zinc-300;
+    @apply rounded-full;
+  }
+}
+
+/* styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-out-down {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.3s ease-out;
+}
+
+.animate-fade-out-down {
+  animation: fade-out-down 0.3s ease-out;
+}
