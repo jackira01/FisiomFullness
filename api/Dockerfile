@@ -5,7 +5,7 @@ FROM oven/bun:1 AS deps
 WORKDIR /app
 
 # Copiar los manifiestos de dependencias
-COPY package.json bun.lockb ./
+COPY package.json bun.lock ./
 
 # Instalar solo dependencias de producción
 RUN bun install --frozen-lockfile --production
