@@ -31,8 +31,8 @@ COPY src/ ./src/
 RUN mkdir -p uploads
 
 # Seguridad: crear usuario sin privilegios de root
-RUN addgroup --system --gid 1001 nodejs \
-    && adduser --system --uid 1001 nodeuser \
+RUN groupadd -r -g 1001 nodejs \
+    && useradd -r -u 1001 -g nodejs nodeuser \
     && chown -R nodeuser:nodejs /app
 
 USER nodeuser
