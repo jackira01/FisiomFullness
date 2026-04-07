@@ -17,12 +17,12 @@ export const getBlogs = async ({
   if (status) query += `&status=${status}`;
 
   try {
-    const res = await axios.get(`${BASE_URL}/blogs${query}`, {
-      withCredentials: true,
-      next: { revalidate: 20 }, // ? Revalidate last blogs after 20 seconds
+    const res = await fetch(`${BASE_URL}/blogs${query}`, {
+      credentials: 'include',
+      next: { revalidate: 20 },
     });
-    if (res.status !== 200) throw new Error('Error fetching blogs');
-    return res.data;
+    if (!res.ok) throw new Error('Error fetching blogs');
+    return await res.json();
   } catch (error) {
     console.error('Error fetching blogs:', error.message);
     return { blogs: [], totalBlogs: 0, hasMoreToLoad: false, totalPages: 0 };
