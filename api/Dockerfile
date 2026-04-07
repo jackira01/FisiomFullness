@@ -1,22 +1,19 @@
 # ==========================================
 # ETAPA 1: Dependencias
 # ==========================================
-FROM node:lts-slim AS deps
+FROM oven/bun:1 AS deps
 WORKDIR /app
 
-# Instalar pnpm
-RUN npm install -g pnpm
-
 # Copiar los manifiestos de dependencias
-COPY package.json pnpm-lock.yaml ./
+COPY package.json bun.lockb ./
 
 # Instalar solo dependencias de producción
-RUN pnpm install --frozen-lockfile --prod
+RUN bun install --frozen-lockfile --production
 
 # ==========================================
 # ETAPA 2: Producción
 # ==========================================
-FROM node:lts-slim AS production
+FROM oven/bun:1 AS production
 WORKDIR /app
 
 # Variables de entorno
@@ -44,4 +41,4 @@ USER nodeuser
 EXPOSE 3000
 
 # Iniciar la aplicación
-CMD ["node", "server.js"]
+CMD ["bun", "server.js"]
