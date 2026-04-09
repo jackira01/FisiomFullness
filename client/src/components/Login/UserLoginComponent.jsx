@@ -128,15 +128,14 @@ const UserLoginComponent = () => {
             Ingresar
           </Button>
 
-          <Button
-            className="flex items-center justify-center mt-2 text-gray-800 uppercase rounded-none font-semibold tracking-wider border border-gray-300"
-            onClick={handleGoogleLogin}
-            isDisabled={isSubmitting}
+          {/* <Button
+            className="flex items-center justify-center mt-2 text-gray-400 uppercase rounded-none font-semibold tracking-wider border border-gray-200 cursor-not-allowed opacity-50"
+            isDisabled={true}
             type="button"
           >
             <FcGoogle className="mr-2" size={24} />
             Ingresar con Google
-          </Button>
+          </Button> */}
 
           <div className="flex flex-row justify-center items-center gap-4 mt-8">
             <a className="text-sm hover:underline" href="/password_olvidada">
